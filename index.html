@@ -1,22 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Timed Quiz</title>
     <!--CSS reset-->
     <link rel="stylesheet" href="assets/css/reset.css">
     <!--CSS bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+
+    <div class="container">
+        <div class="row" id="title">
+            <h1>Hockey Trivia Shootout</h1>
+        </div>
+
+        <div class="row" id="timer"></div>
+        <hr>
+
+        <!--Question One-->
+        <p id="questionOne">The National Hockey League only consists of teams within the USA:</p>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="1Wrong" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">True</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="1Correct" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">False</label>
+        </div>
+        <hr>
+
+        <!--Question Two-->
+        <p id="questionTwo">When a player scores three goals in a single game it is called a:</p>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="2Wrong1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Three's Company</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="2Wrong2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Grand Slam</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="2Correct" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Hat Trick</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="2Wrong3" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Triple Crown</label>
+        </div>
+        <hr>
+
+        <!--Question Three-->
+        <p id="questionThree">The NHL Championship Cup is named after:</p>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="3Wrong1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Sir Dudley</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="3Wrong2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Earl Aurthur</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="3Wrong3" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Duke Ferdinand</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="3Correct" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Lord Stanley</label>
+        </div>
+        <hr>
+
+        <!--Question Four-->
+        <p id="questionFour">How many periods are played in a regulation game?</p>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="4Wrong1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="4Wrong2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="4Correct" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="4Wrong3" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">4</label>
+        </div>
+
+    </div>
 
     <!--JS link-->
     <script src="assets/javascript/app.js"></script>
     <!--jQuery link-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
+
 </html>
