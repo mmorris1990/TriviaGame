@@ -196,6 +196,31 @@ function displayReview() {
     $("#time-left").text("Timeout");
 };
 
+// Display end of game
+function displayEnd() {
+    clearQuestion();
+    // shows the final score
+    $("#content").append("<h2>" + "Correct answers: " + correct + "</h2> <br> <h2>" + "Incorrect answers: " + incorrect + "</h2> <br> <h2> <button class='btn btn-primary btn-lg' id='restart-button'>" + "Rematch" + "</button");
+
+    // restarts game
+    $("#restart-button").on("click" , function(restart) {
+        restart.preventDefault();
+        // show first question
+        reset();
+        clearQuestion();
+        displayStart();
+    });
+};
+
+// Reset variables for end of game
+function reset() {
+    questionCounter = 0;
+    correct = 0;
+    incorrect = 0;
+    userAnswer = [];
+    resetTimer();
+};
+
 // Starts game on page load
 displayStart();
 });
