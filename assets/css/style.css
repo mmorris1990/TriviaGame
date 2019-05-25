@@ -1,5 +1,6 @@
 body {
     background-image: url("../images/ice.jpg");
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #start-button {
@@ -9,4 +10,6 @@ body {
 #header {
     text-align: center;
     margin-top: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
