@@ -1,3 +1,12 @@
 body {
     background-image: url("../images/ice.jpg");
 }
+
+#start-button {
+    margin-top: 15px;
+}
+
+#header {
+    text-align: center;
+    margin-top: 5px;
+}
