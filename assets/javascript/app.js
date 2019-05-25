@@ -10,7 +10,7 @@ var increment;
 
 var timeLeft = 10;
 
-var corrent = 0;
+var correct = 0;
 
 var incorrect = 0;
 
@@ -91,6 +91,7 @@ function firstQuestion() {
 
 // Display the current question page
 function displayQuestion() {
+    // clear previous quiz form and timer
     clearQuestion();
     resetTimer();    
     // display question
@@ -141,8 +142,58 @@ function submitAnswer() {
         var userSelection = $("#responses input:radio[name=optionRadios]:checked").val();
         userAnswer.push(userSelection);
         console.log(userAnswer);
-        nextQuestion;
+        nextQuestion();
     });
+};
+
+// Change to the next question or end the quiz
+function nextQuestion() {
+    // check for correct answer
+    checkQuestion();
+
+    questionCounter++;
+    // either end the quiz or display next question
+    if (questionCounter === questions.length) {
+        setTimeout(displayEnd, answerTimeout);
+    }
+
+    else {
+        setTimeout(displayQuestion, answerTimeout);
+    };
+};
+
+// Check user choice with the correct answer for each question
+function checkQuestion() {
+    // clear current quiz form
+    clearQuestion();
+
+    // find correct answer to current question
+    var correctAnswer = questions[questionCounter].choicesAnswer;
+
+    // compare choice with answer
+    if (userAnswer[0] == questions[questionCounter].choicesAnswer) {
+        $("#content").append("<h2>" + "Score! You chose the right answer!" + "</h2>");
+        // add to the correct choice counter
+        correct++;
+        displayReview();
+    }
+
+    else if (userAnswer[0] === undefined) {
+        $("#content").append("<h2>" + "Time's up!" + "</h2> <br> <h2>" + "The correct answer was: " + questions[questionCounter].choices[correctAnswer] + "</h2>");
+		displayReview();
+    }
+
+    else {
+        $("#content").append("<h2>" + "You chose the wrong answer." + "</h2> <br> <h2>" + "The correct answer was: " + questions[questionCounter].choices[correctAnswer] + "</h2>");
+        // add to the incorrect choice counter
+		incorrect++;
+		displayReview();        
+    };
+};
+
+// Remove timer for the answer review
+function displayReview() {
+    $("#time-left").text("Timeout");
 };
 
 // Starts game on page load
