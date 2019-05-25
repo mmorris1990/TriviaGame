@@ -18,90 +18,71 @@
 <body>
 
     <div class="container">
-        <div class="row" id="title">
+        <div class="jumbotron bg-light" id="header">
             <h1>Hockey Trivia Shootout</h1>
         </div>
 
-        <div class="row" id="timer"></div>
-        <hr>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
 
-        <!--Question One-->
-        <p id="questionOne">The National Hockey League only consists of teams within the USA:</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="1Wrong" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">True</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="1Correct" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">False</label>
-        </div>
-        <hr>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
 
-        <!--Question Two-->
-        <p id="questionTwo">When a player scores three goals in a single game it is called a:</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="2Wrong1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Three's Company</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="2Wrong2" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">Grand Slam</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="2Correct" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Hat Trick</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="2Wrong3" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">Triple Crown</label>
-        </div>
-        <hr>
+                    <div class="col-md-4 text-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-body bg-light">
+                                    <h4 id="time-left">
+                                        Time remaining: 10 seconds
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
 
-        <!--Question Three-->
-        <p id="questionThree">The NHL Championship Cup is named after:</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="3Wrong1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Sir Dudley</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="3Wrong2" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">Earl Aurthur</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="3Wrong3" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Duke Ferdinand</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="3Correct" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">Lord Stanley</label>
-        </div>
-        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="content">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <!--Question Four-->
-        <p id="questionFour">How many periods are played in a regulation game?</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="4Wrong1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">1</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="4Wrong2" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">2</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="4Correct" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">3</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="4Wrong3" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">4</label>
-        </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="quiz">
+                            <form>
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <h6 class="questionX"></h6>
+                                        <div id="responses">
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div id="submit-div"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-md-1">
+            </div>
+        </div>
     </div>
 
-    <!--JS link-->
-    <script src="assets/javascript/app.js"></script>
-    <!--jQuery link-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!--JS link-->
+        <script src="assets/javascript/app.js"></script>
+        <!--jQuery link-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 
 </html>
