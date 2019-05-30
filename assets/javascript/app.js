@@ -195,7 +195,7 @@ $(document).ready(function () {
 
         // create multiple choice input
         for (var i = 0; i < questions[questionCounter].choices.length; i++) {
-            responseOptions.append("<input type='radio' name='optionRadios' value='" + [i] + "'><div class='options'>" + questions[questionCounter].choices[i] + "</div></input>");
+            responseOptions.append("<input type='radio' name='optionRadios' value='" + [i] + "' style='float:left'><div class='options' style='font-weight:bold'>" + '&nbsp &nbsp' + questions[questionCounter].choices[i] + "</div></input>");
         };
     };
 
